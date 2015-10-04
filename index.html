@@ -29,8 +29,6 @@
     </head>
     <body>
         <h1 id="text">Please allow access to mic.</h1>
-        <p>Speech.js demo by Evan You</p>
-        <a href="https://github.com/yyx990803/Speech.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
         <script type="text/javascript">
 
 
@@ -70,18 +68,19 @@
          }
 
 
+var text = document.getElementById('text')
+
+var speech = new Speech({
+    debugging: true,
+    continuous: true,
+    interimResults: true,
+    autoRestart: true
+})
+
 conn.on('ready', function(data){
 console.log('UUID AUTHENTICATED!');
 console.log(data);
 
-            var text = document.getElementById('text')
-
-            var speech = new Speech({
-                debugging: true,
-                continuous: true,
-                interimResults: true,
-                autoRestart: true
-            })
 
             var words;
             speech

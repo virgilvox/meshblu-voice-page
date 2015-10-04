@@ -1,4 +1,4 @@
-var Speech = (function (undefined) {
+var Speech = (function () {
 
     // https://github.com/aralejs/events ======================================
 
