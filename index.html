@@ -82,30 +82,31 @@ console.log('UUID AUTHENTICATED!');
 console.log(data);
 
 
-            var words;
+
             speech
                 .on('start', function () {
-                  words = "";
+
                     text.innerHTML = 'Come on, talk to me.'
                 })
                 .on('end', function () {
                     text.innerHTML = 'Stopped listening.'
                 })
                 .on('interimResult', function (msg) {
-                  words = words + msg;
+
                     text.innerHTML = msg
                 })
                 .on('finalResult', function (msg) {
-                    words = words + msg;
+
                     var message = {
                                      "devices": "*",
                                      "payload": {
-                                     "speech": words
+                                     "speech": msg
                                      }
                                    };
 
                                      conn.message(message);
                     text.innerHTML = msg
+
                 })
                 .start()
 

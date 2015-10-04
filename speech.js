@@ -1,4 +1,4 @@
-var Speech = (function () {
+var Speech = (function (undefined) {
 
     // https://github.com/aralejs/events ======================================
 
@@ -198,5 +198,6 @@ var Speech = (function () {
 
 })()
 
-
+if (module && module.exports) {
     module.exports = Speech
+}
