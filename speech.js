@@ -158,7 +158,7 @@ var Speech = (function (undefined) {
                 // interim, let's update stuff on screen
                 self.emit('interimResult', transcript)
             }
-            
+
             if (self.options.debugging) {
                 console.log(transcript + (updatedResult.isFinal ? ' (final)' : ''))
             }
@@ -198,6 +198,5 @@ var Speech = (function (undefined) {
 
 })()
 
-if (module && module.exports) {
+
     module.exports = Speech
-}
